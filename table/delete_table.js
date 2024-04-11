@@ -1,6 +1,6 @@
 import pool from "../pool.js"; // assumindo que você já tenha um pool configurado
 
-const deleteTable = async (tableName) => {
+export default async function deleteTable(tableName) {
   const queryText = `DROP TABLE IF EXISTS ${tableName};`;
   try {
     await pool.query(queryText);
@@ -10,4 +10,4 @@ const deleteTable = async (tableName) => {
   }
 };
 
-deleteTable('execuções');
+deleteTable('execucoes');

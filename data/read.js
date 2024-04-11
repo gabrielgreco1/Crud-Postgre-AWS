@@ -1,6 +1,6 @@
 import pool from "../pool.js";
 
-const readData = async () => {
+export default async function readData() {
     try {
       const res = await pool.query('SELECT * FROM execucoes');
       console.log('Dados:', res.rows);

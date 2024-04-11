@@ -1,6 +1,6 @@
 import pool from "../pool.js";
 
-const listTables = async () => {
+export default async function listTables (){
     const queryText = `SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema';`;
     try {
       const res = await pool.query(queryText);

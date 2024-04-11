@@ -1,9 +1,9 @@
 import pool from "../pool.js";
 
-const createTable = async () => {
+export default async function createTable() {
   const queryText =
     `CREATE TABLE execucoes (
-      id SERIAL PRIMARY KEY,
+      id PRIMARY KEY,
       automacao VARCHAR(255) NOT NULL,
       quantidade INTEGER DEFAULT 0,
       usuario VARCHAR(255) NOT NULL,
