@@ -7,8 +7,7 @@ export default async function insertData(automacao, quantidade, usuario, status)
     RETURNING id`;
     try {
       const res = await pool.query(queryText, [automacao, quantidade, usuario, status]);
-      console.log(res.rows[0].id)
-      console.log('Dados inseridos com sucesso.');
+      console.log('Execução gravada com sucesso.');
       return (res.rows[0].id)
     } catch (err) {
       console.error('Erro ao inserir dados:', err);
